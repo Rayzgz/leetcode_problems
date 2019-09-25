@@ -12,3 +12,15 @@ vector<int> twoSum(vector<int>& nums, int target) {
     
     return vect;
 }
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    unordered_map<int> hashmap;
+    for(int i = 0; i < nums.size();i++){
+        if(hashmap.find(target - nums[i]) != hashmap.end()){
+            return vector<int> v{target-nums[i], nums[i]};
+        }
+        hashmap.insert(nums[i]);
+    }
+    
+    return vect;
+}
