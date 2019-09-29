@@ -33,7 +33,8 @@ public:
 // each level check if left and right are same
 // if same then return the subtree nodes
 // if not the same, then count the subtrees
-// h + (h-1) + (h-2) ... = h^2  = (log N)^2
+// at each level, there must be 1half is complete -> logn
+// next level, logn - 1 ...
 class Solution {
 public:
 
