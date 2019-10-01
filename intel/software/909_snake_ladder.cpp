@@ -17,7 +17,6 @@ public:
             }
             left = !left;
         }
-        
 
         // create queue, map
         queue<int> squares;
@@ -35,8 +34,8 @@ public:
             }
             
             // enumerate possible moves at this point
-            int size = board2.size() - 1;
-            for(int s2 = s+1; s2 < min(size,s+6) ;s2++){
+            int size = board2.size() - 1;// 35
+            for(int s2 = s+1; s2 <= min(size,s+6) ;s2++){
                 int s2_final = board2[s2] < 0 ? s2 : board2[s2];
                 if(distance.find(s2_final) == distance.end()){
                     distance[s2_final] = distance[s] + 1;
